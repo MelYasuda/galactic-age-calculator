@@ -5,6 +5,38 @@
     <title>galactic-age-calculator</title>
   </head>
   <body>
-    <p>galactic-age-calculator</p>
+    <div class="container">
+      <h2>galactic-age-calculator</h2>
+      <form id="user-form">
+        <div class="form-group">
+
+          <label for="year">Your birth year:</lable>
+          <input id="year" type="number" name="year">
+
+          <div class="radio">
+            <label>
+              <input type="radio" name="gender" value="M" checked>
+              M
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="gender" value="F">
+              F
+            </label>
+          </div>
+
+        </div>
+        <button type="submit" class="btn btn-info">Go!</button>
+      </form>
+      <div id="result">
+        <ul>
+          <li>Your Mergury age is <span id="mercury"></span> (and <span id="mercury-expect"></span>)</li>
+          <li>Your Venus age is <span id="venus"></span> (and <span id="venus-expect"></span>)</li>
+          <li>Your Mars age is <span id="mars"></span> (and <span id="mars-expect"></span>)</li>
+          <li>Your Jupiter age is <span id="jupiter"></span> (and <span id="jupiter-expect"></span>)</li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
