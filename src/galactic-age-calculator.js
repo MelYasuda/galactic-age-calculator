@@ -19,4 +19,14 @@ export class Age {
     let DecimalAge = this.earthAgeInDays() / 225;
     return Math.floor(DecimalAge);
   }
+
+  ageInMars(){
+    let DecimalAge = this.earthAgeInDays() / 687;
+    return Math.floor(DecimalAge);
+  }
+
+  ageInJupiter(){
+    let DecimalAge = this.earthAgeInDays() / 4380;
+    return Math.floor(DecimalAge);
+  }
 }

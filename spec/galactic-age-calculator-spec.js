@@ -14,9 +14,16 @@ describe('Mercury Age', function() {
     });
 });
 
-describe('Venus Age', function() {
-    it('shoud return user venus age', function() {
+describe('Mars Age', function() {
+    it('shoud return user mars age', function() {
       let testAge = new Age("1988");
-        expect(testAge.ageInVenus()).toEqual(48);
+        expect(testAge.ageInMars()).toEqual(15);
+    });
+});
+
+describe('Jupiter Age', function() {
+    it('shoud return user Jupiter age', function() {
+      let testAge = new Age("1988");
+        expect(testAge.ageInJupiter()).toEqual(2);
     });
 });
