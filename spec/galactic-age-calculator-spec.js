@@ -48,3 +48,17 @@ describe('LeftYearsInVenus', function() {
         expect(testAge.leftYearsInVenus()).toEqual("You have 32 years left in Venus.");
     });
 });
+
+describe('LeftYearsInMars', function() {
+    it('shoud return user left years in Mars', function() {
+      let testAge = new Age("1988", "M");
+        expect(testAge.leftYearsInMars()).toEqual("You have 65 years left in Mars.");
+    });
+});
+
+describe('LeftYearsInJupiter', function() {
+    it('shoud return user left years in Jupiter', function() {
+      let testAge = new Age("1988", "M");
+        expect(testAge.leftYearsInJupiter()).toEqual("You have 78 years left in Jupiter.");
+    });
+});
