@@ -1,6 +1,7 @@
 export class Age {
-  constructor(year) {
+  constructor(year, gender) {
     this.year = year;
+    this.gender = gender
   }
 
   // current year - user's age
@@ -28,5 +29,35 @@ export class Age {
   ageInJupiter(){
     let DecimalAge = this.earthAgeInDays() / 4380;
     return Math.floor(DecimalAge);
+  }
+
+  leftYearsInMercury(){
+    const lifeExpectancy = {
+      "M":80,
+      "F":90
+    }
+    let leftYears = lifeExpectancy[this.gender] - this.ageInMercury();
+    if(leftYears === 0){
+      return "You'll die this year";
+    } else if (leftYears > 0) {
+      return "You have" + leftYears + "years left in Mercury."
+    } else {
+      return "You have been dead for " + Math.abs(leftYears) + " years in Mercury."
+    }
+  }
+
+  leftYearsInVenus(){
+    const lifeExpectancy = {
+      "M":80,
+      "F":90
+    }
+    let leftYears = lifeExpectancy[this.gender] - this.ageInVenus();
+    if(leftYears === 0){
+      return "You'll die this year";
+    } else if (leftYears > 0) {
+      return "You have " + leftYears + " years left in Venus."
+    } else {
+      return "You have been dead for " + Math.abs(leftYears) + " years in Venus."
+    }
   }
 }
